@@ -1,0 +1,146 @@
+[
+{
+"player": "Has",
+"team": "Philadelphia 76ers",
+"vegas_total": 49.5,
+"draft_slot": 4
+},
+{
+"player": "Has",
+"team": "Houston Rockets",
+"vegas_total": 48.5,
+"draft_slot": 4
+},
+{
+"player": "Has",
+"team": "Orlando Magic",
+"vegas_total": 43.5,
+"draft_slot": 4
+},
+{
+"player": "Has",
+"team": "Phoenix Suns",
+"vegas_total": 38.5,
+"draft_slot": 4
+},
+{
+"player": "Rob",
+"team": "Detroit Pistons",
+"vegas_total": 47.5,
+"draft_slot": 5
+},
+{
+"player": "Rob",
+"team": "Cleveland Cavaliers",
+"vegas_total": 48.5,
+"draft_slot": 5
+},
+{
+"player": "Rob",
+"team": "Dallas Mavericks",
+"vegas_total": 33.5,
+"draft_slot": 5
+},
+{
+"player": "Rob",
+"team": "Memphis Grizzlies",
+"vegas_total": 30.5,
+"draft_slot": 5
+},
+{
+"player": "Chris",
+"team": "San Antonio Spurs",
+"vegas_total": 60.5,
+"draft_slot": 2
+},
+{
+"player": "Chris",
+"team": "Minnesota Timberwolves",
+"vegas_total": 46.5,
+"draft_slot": 2
+},
+{
+"player": "Chris",
+"team": "Miami Heat",
+"vegas_total": 44.5,
+"draft_slot": 2
+},
+{
+"player": "Chris",
+"team": "Utah Jazz",
+"vegas_total": 37.5,
+"draft_slot": 2
+},
+{
+"player": "Batman",
+"team": "New York Knicks",
+"vegas_total": 51.5,
+"draft_slot": 3
+},
+{
+"player": "Batman",
+"team": "Los Angeles Lakers",
+"vegas_total": 45.5,
+"draft_slot": 3
+},
+{
+"player": "Batman",
+"team": "Golden State Warriors",
+"vegas_total": 36.5,
+"draft_slot": 3
+},
+{
+"player": "Batman",
+"team": "Charlotte Hornets",
+"vegas_total": 37.5,
+"draft_slot": 3
+},
+{
+"player": "Herman",
+"team": "Boston Celtics",
+"vegas_total": 51.5,
+"draft_slot": 6
+},
+{
+"player": "Herman",
+"team": "Denver Nuggets",
+"vegas_total": 48.5,
+"draft_slot": 6
+},
+{
+"player": "Herman",
+"team": "Portland Trail Blazers",
+"vegas_total": 41.5,
+"draft_slot": 6
+},
+{
+"player": "Herman",
+"team": "Atlanta Hawks",
+"vegas_total": 43.5,
+"draft_slot": 6
+},
+{
+"player": "Andrew",
+"team": "Oklahoma City Thunder",
+"vegas_total": 61.5,
+"draft_slot": 1
+},
+{
+"player": "Andrew",
+"team": "Indiana Pacers",
+"vegas_total": 44.5,
+"draft_slot": 1
+},
+{
+"player": "Andrew",
+"team": "Toronto Raptors",
+"vegas_total": 46.5,
+"draft_slot": 1
+},
+{
+"player": "Andrew",
+"team": "Washington Wizards",
+"vegas_total": 34.5,
+"draft_slot": 1
+}
+]

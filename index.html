@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hot Dog Cup 26/27</title>
+<meta property="og:title" content="Hot Dog Cup 26/27">
+<meta property="og:description" content="Live standings for the 2026-27 NBA wins bet. Most wins collects $125. Fewest wins eats 69 hot dogs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter+Tight:wght@400;500;600&display=swap">
+<style>
+:root {
+  --font-anthropic-sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-anthropic-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --color-bg: #f6f7f4; --color-fg: #1b1f1a; --color-fg-muted: #636a61; --color-panel: #ffffff; --color-border-line: #e0e3dc;
+  --color-ok: #1f7a46; --color-warn: #a86b00; --color-bad: #c0392b;
+  --cds-chart-muted: #b9bfb5; --cds-chart-status-critical: #d9534f; --cds-chart-grid: #e8ebe5; --cds-chart-axis: #b9bfb5; --cds-chart-reference: #8a9187;
+  --cds-surface-popover: #ffffff; --cds-border: #d6dad2; --cds-shadow-popover: 0 6px 20px rgba(20,30,20,.12); --cds-text-secondary: #636a61;
+  --s1: #2f6fdb; --s2: #e07b22; --s3: #2a9d8f; --s4: #b8418f; --s5: #7a5cd6; --s6: #8c6d1f;
+  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 16px; --cds-gap-lg: 24px; --cds-gap-xl: 36px;
+  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 20px;
+  --cds-radius: 10px; --cds-font-size-caption: 12.5px; --cds-font-size-body: 15px; --cds-font-size-heading: 17px; --cds-font-size-title: 26px; --cds-font-weight-medium: 600;
+  --cds-dur-slow: 300ms; color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --color-bg: #121512; --color-fg: #e9ece6; --color-fg-muted: #9aa396; --color-panel: #1b1f1b; --color-border-line: #2c322b;
+  --color-ok: #5cc98a; --color-warn: #e0a640; --color-bad: #ef7b6e;
+  --cds-chart-muted: #4c544a; --cds-chart-status-critical: #e8665a; --cds-chart-grid: #262b25; --cds-chart-axis: #4c544a; --cds-chart-reference: #7d8679;
+  --cds-surface-popover: #222722; --cds-border: #353c34; --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.5); --cds-text-secondary: #9aa396;
+  --s1: #6c9cf0; --s2: #f0a160; --s3: #5cc4b6; --s4: #e07bbd; --s5: #a28cf0; --s6: #d1b25a;
+  color-scheme: dark;
+} }
+html, body { margin: 0; background: var(--color-bg); color: var(--color-fg); }
+body { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body);
+  padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.dash-skeleton { color: transparent !important; background: var(--color-border-line); border-radius: 6px; }
+.hd-foot { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-align: center; }
+.hd-foot a { color: inherit; }
+.hd { max-width: 1100px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
+.hd-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.hd-eyebrow { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); letter-spacing: .06em; text-transform: uppercase; }
+.hd-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: calc(var(--cds-font-size-title) * 1.5); line-height: 1.1; margin: 0; text-wrap: balance; }
+.hd-take { font-size: var(--cds-font-size-heading); margin: 0; max-width: 62ch; line-height: 1.45; }
+.hd .hd-take b { font-weight: 600; }
+.hd-through { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; }
+.hd-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-md); min-width: 0; }
+.hd-card h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.hd-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; }
+.hd-scroll { overflow-x: auto; }
+.hd-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.hd-table th { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-weight: 500; text-align: right; padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.hd-table td { text-align: right; padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.hd-table tr:last-child td { border-bottom: 0; }
+.hd-table th.l, .hd-table td.l { text-align: left; }
+.hd-lb td.rank { color: var(--color-fg-muted); width: 2.5em; text-align: left; }
+.hd-lb td.who { font-weight: 600; }
+.hd-lb td.winsc { width: 40%; min-width: 140px; }
+.hd-bar { display: flex; align-items: center; gap: var(--cds-gap-sm); justify-content: flex-start; }
+.hd-bar i { display: block; height: 10px; border-radius: 5px; background: var(--cds-chart-muted); min-width: 2px; }
+.hd-lb tr.leader .hd-bar i { background: var(--color-ok); }
+.hd-lb tr.last .hd-bar i { background: var(--cds-chart-status-critical); }
+.hd-bar span { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); min-width: 2ch; text-align: right; }
+.hd-chip { display: inline-block; font-size: var(--cds-font-size-caption); font-weight: 500; padding: 1px 8px; border-radius: 999px; margin-left: var(--cds-gap-sm); border: 1px solid currentColor; vertical-align: 1px; }
+.hd-chip.ok { color: var(--color-ok); }
+.hd-chip.bad { color: var(--color-bad); }
+.pos { color: var(--color-ok); } .neg { color: var(--color-bad); }
+.hd-chartbox { position: relative; min-height: 280px; }
+.hd-chartbox svg { display: block; }
+.hd-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; }
+.hd-tip .d { color: var(--cds-text-secondary); margin-bottom: 2px; }
+.hd-tip .r { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
+.hd-tip .r b { margin-left: auto; padding-left: 12px; }
+.hd-tip .sw { width: 8px; height: 8px; border-radius: 2px; }
+.hd-empty { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 280px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-lg); }
+.hd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); }
+.hd-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+.hd-grid .hd-table th, .hd-grid .hd-table td { padding-inline: 5px; }
+.hd-grid .hd-table th:first-child, .hd-grid .hd-table td:first-child { padding-left: 0; }
+.hd-section > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.hd-ros-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--cds-gap-sm); }
+.hd-ros-head h3 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: 600; }
+.hd-ros-total { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+.hd-ros-sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.hd-rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: var(--cds-gap-md); }
+.hd-rule { display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
+.hd-rule .k { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .06em; }
+.hd-rule .v { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); }
+.hd-rule p { margin: 0; line-height: 1.45; }
+.hd-fail { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: 120px; }
+.hd-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+</head>
+<body>
+<div class="hd">
+  <header class="hd-head">
+    <div class="hd-eyebrow">NBA 2026–27 · six friends, four teams each</div>
+    <h1 class="hd-title">Hot Dog Cup 26/27</h1>
+    <p class="hd-take" id="take">
+      <b class="dash-skeleton" data-source="summary" data-field="leader" data-row="0">—</b> <span id="lead-verb">leads</span> with
+      <b class="dash-skeleton" data-source="summary" data-field="leader_wins" data-row="0">—</b> wins.
+      <b class="dash-skeleton" data-source="summary" data-field="last" data-row="0">—</b> <span id="last-verb">is</span> in the hot dog zone with
+      <b class="dash-skeleton" data-source="summary" data-field="last_wins" data-row="0">—</b>.
+    </p>
+    <p class="hd-through">Standings through <span class="dash-skeleton" id="through" data-source="summary" data-field="through" data-row="0">—</span> · updated every morning from Basketball Reference</p>
+  </header>
+
+  <section class="hd-card" id="leaderboard-card">
+    <h2>Leaderboard</h2>
+    <p class="hd-note">Total regular-season wins across each player's four teams. Pace projects every team's current win rate over 82 games; the line is the sum of the preseason Vegas win totals from draft night.</p>
+    <div class="hd-scroll">
+      <table class="hd-table hd-lb" id="lb" data-source="leaderboard" data-row-key="player">
+        <thead><tr>
+          <th class="l" data-field="rank">#</th>
+          <th class="l" data-field="player">Player</th>
+          <th class="l" data-field="wins">Wins</th>
+          <th data-field="losses">Losses</th>
+          <th data-field="win_pct">Pct</th>
+          <th data-field="back">Back</th>
+          <th data-field="pace">82-game pace</th>
+          <th data-field="vegas_line">Vegas line</th>
+          <th data-field="vs_line">Pace vs line</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="hd-card" id="race-card">
+    <h2>The race</h2>
+    <p class="hd-note">Total wins by date, one line per player.</p>
+    <div class="hd-chartbox" id="race" data-source="race"></div>
+  </section>
+
+  <section class="hd-section" id="rosters">
+    <h2>Rosters</h2>
+    <div class="hd-grid" id="roster-grid"></div>
+  </section>
+
+  <section class="hd-card" id="stakes">
+    <h2>What's on the line</h2>
+    <div class="hd-rules">
+      <div class="hd-rule"><span class="k">Most wins</span><span class="v">$25 from everyone</span><p>The winner collects $25 from each of the other five, $125 in all.</p></div>
+      <div class="hd-rule"><span class="k">Fewest wins</span><span class="v">69 hot dogs</span><p>Standard Oscar Mayer franks with buns. Loser picks: two weeks with any toppings, or one month eaten dry.</p></div>
+      <div class="hd-rule"><span class="k">Tie for last</span><span class="v">Everyone eats</span><p>If two or more tie for fewest wins, each of them follows the trolls before them and does the full punishment.</p></div>
+    </div>
+  </section>
+<p class="hd-foot">Standings: <a href="https://www.basketball-reference.com/leagues/NBA_2027_standings.html" target="_blank" rel="noopener">Basketball Reference</a> · refreshed daily by GitHub Actions</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+// Minimal stand-in for the dashboard runtime: loads the JSON files and runs the same calcs.
+const dash = (() => {
+  const files = { picks: 'data/picks.json', standings: 'data/standings.json', history: 'data/history.json' };
+  const store = {}, calcs = [], listeners = [];
+  const css = getComputedStyle(document.documentElement);
+  const colors = ['--s1','--s2','--s3','--s4','--s5','--s6'].map((v) => css.getPropertyValue(v).trim());
+  let status = 'loading';
+  const api = {
+    colors,
+    calc(id, def) { calcs.push([id, def]); },
+    data(id) { return status === 'ok' && store[id] ? { status: 'ok', data: store[id] } : { status, data: [] }; },
+    onData(fn) { listeners.push(fn); fn(); },
+  };
+  const fire = () => listeners.forEach((fn) => fn());
+  Promise.all(Object.entries(files).map(([id, url]) =>
+    fetch(url + '?v=' + Date.now()).then((r) => { if (!r.ok) throw new Error(url); return r.json(); }).then((j) => { store[id] = j; })))
+    .then(() => { for (const [id, def] of calcs) store[id] = def.fn(...def.inputs.map((i) => store[i])); status = 'ok'; fire(); })
+    .catch(() => { status = 'error'; fire(); });
+  let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(fire, 150); });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => location.reload());
+  return api;
+})();
+
+const fmtPct = (x) => d3.format('.3f')(x).replace(/^0/, '');
+const fmtSigned = (x) => (x > 0 ? '+' : x < 0 ? '−' : '') + d3.format('.1f')(Math.abs(x));
+const fmt1 = d3.format('.1f');
+const nick = (t) => t.endsWith('Trail Blazers') ? 'Trail Blazers' : t.split(' ').pop();
+const joinNames = (a) => a.length <= 1 ? (a[0] || '') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+
+dash.calc('leaderboard', {
+  inputs: ['picks', 'standings'],
+  title: 'Leaderboard',
+  description: 'Each player\'s four teams summed: wins, losses, win rate, 82-game pace and preseason Vegas line. A team with no games yet counts at its Vegas line for pace.',
+  fn: (picks, standings) => {
+    const byTeam = new Map(standings.map((s) => [s.team, s]));
+    const players = [...new Set(picks.map((p) => p.player))];
+    const rows = players.map((player) => {
+      let wins = 0, losses = 0, pace = 0, line = 0;
+      for (const p of picks.filter((x) => x.player === player)) {
+        const s = byTeam.get(p.team) || { wins: 0, losses: 0 };
+        const w = Number(s.wins), l = Number(s.losses), v = Number(p.vegas_total);
+        wins += w; losses += l; line += v;
+        pace += (w + l) ? (w / (w + l)) * 82 : v;
+      }
+      return { player, wins, losses, win_pct: (wins + losses) ? wins / (wins + losses) : 0,
+        pace: Math.round(pace * 10) / 10, vegas_line: line, vs_line: Math.round((pace - line) * 10) / 10 };
+    });
+    rows.sort((a, b) => b.wins - a.wins || a.losses - b.losses || a.player.localeCompare(b.player));
+    const top = rows[0].wins, bottom = Math.min(...rows.map((r) => r.wins));
+    rows.forEach((r) => {
+      r.rank = 1 + rows.filter((o) => o.wins > r.wins).length;
+      r.back = top - r.wins;
+      r.status = r.wins === top ? 'leader' : r.wins === bottom ? 'last' : '';
+    });
+    return rows;
+  }
+});
+
+dash.calc('summary', {
+  inputs: ['leaderboard', 'history'],
+  title: 'Who leads, who eats',
+  description: 'The player(s) with the most and fewest wins, and the latest date in the standings history.',
+  fn: (leaderboard, history) => {
+    const top = Math.max(...leaderboard.map((r) => r.wins));
+    const bottom = Math.min(...leaderboard.map((r) => r.wins));
+    const leaders = leaderboard.filter((r) => r.wins === top).map((r) => r.player);
+    const lasts = leaderboard.filter((r) => r.wins === bottom).map((r) => r.player);
+    const through = history.map((h) => String(h.date).slice(0, 10)).sort().pop() || '';
+    return [{ leader: leaders.join(' & '), leader_count: leaders.length, leader_wins: top,
+      last: lasts.join(' & '), last_count: lasts.length, last_wins: bottom, through }];
+  }
+});
+
+dash.calc('roster', {
+  inputs: ['picks', 'standings'],
+  title: 'Team records by player',
+  description: 'Each drafted team\'s record from the standings, its 82-game pace and its preseason Vegas line.',
+  fn: (picks, standings) => {
+    const byTeam = new Map(standings.map((s) => [s.team, s]));
+    return picks.map((p) => {
+      const s = byTeam.get(p.team) || { wins: 0, losses: 0 };
+      const w = Number(s.wins), l = Number(s.losses), v = Number(p.vegas_total);
+      const pace = (w + l) ? Math.round((w / (w + l)) * 82 * 10) / 10 : v;
+      return { team: p.team, player: p.player, wins: w, losses: l, pace, vegas_total: v, vs_line: Math.round((pace - v) * 10) / 10 };
+    });
+  }
+});
+
+dash.calc('race', {
+  inputs: ['picks', 'history'],
+  title: 'Wins by date',
+  description: 'Daily standings snapshots summed over each player\'s four teams.',
+  fn: (picks, history) => {
+    const owner = new Map(picks.map((p) => [p.team, p.player]));
+    const acc = new Map();
+    for (const h of history) {
+      const player = owner.get(h.team); if (!player) continue;
+      const date = String(h.date).slice(0, 10), k = date + '|' + player;
+      acc.set(k, { date, player, wins: (acc.get(k)?.wins || 0) + Number(h.wins) });
+    }
+    return [...acc.values()].sort((a, b) => a.date.localeCompare(b.date) || a.player.localeCompare(b.player));
+  }
+});
+
+const failHTML = '<div class="hd-fail">Failed to load</div>';
+const isBad = (s) => s === 'error' || s === 'connect' || s === 'declined' || s === 'missing';
+
+function drawSummary() {
+  const d = dash.data('summary');
+  const els = document.querySelectorAll('#take [data-field], #through');
+  if (d.status !== 'ok' || !d.data.length) { els.forEach((e) => { e.textContent = '—'; if (isBad(d.status)) e.classList.remove('dash-skeleton'); }); return; }
+  const s = d.data[0];
+  els.forEach((e) => { e.classList.remove('dash-skeleton'); });
+  document.querySelector('[data-field="leader"]').textContent = s.leader;
+  document.querySelector('[data-field="leader_wins"]').textContent = s.leader_wins;
+  document.querySelector('[data-field="last"]').textContent = s.last;
+  document.querySelector('[data-field="last_wins"]').textContent = s.last_wins;
+  document.getElementById('lead-verb').textContent = s.leader_count > 1 ? 'are tied for the lead' : 'leads';
+  document.getElementById('last-verb').textContent = s.last_count > 1 ? 'are tied' : 'is';
+  document.getElementById('through').textContent = s.through ? d3.utcFormat('%b %-d, %Y')(new Date(s.through)) : '—';
+}
+
+function drawLeaderboard() {
+  const d = dash.data('leaderboard');
+  const tb = document.querySelector('#lb tbody');
+  tb.textContent = '';
+  if (d.status !== 'ok') {
+    if (isBad(d.status)) { const tr = tb.insertRow(); const td = tr.insertCell(); td.colSpan = 9; td.innerHTML = failHTML; }
+    return;
+  }
+  const max = d3.max(d.data, (r) => r.wins) || 1;
+  for (const r of d.data) {
+    const tr = tb.insertRow();
+    tr.dataset.key = r.player;
+    if (r.status) tr.className = r.status;
+    const c = (txt, cls) => { const td = tr.insertCell(); if (cls) td.className = cls; if (txt !== undefined) td.textContent = txt; return td; };
+    c(r.rank, 'l rank');
+    const who = c(r.player, 'l who');
+    if (r.status === 'leader') { const s = document.createElement('span'); s.className = 'hd-chip ok'; s.textContent = 'Collecting $125'; who.append(s); }
+    if (r.status === 'last') { const s = document.createElement('span'); s.className = 'hd-chip bad'; s.textContent = '69 hot dogs'; who.append(s); }
+    const wc = c(undefined, 'l winsc');
+    const bar = document.createElement('div'); bar.className = 'hd-bar';
+    const num = document.createElement('span'); num.textContent = r.wins;
+    const i = document.createElement('i'); i.style.width = `calc(${(r.wins / max) * 100}% - 3ch)`;
+    bar.append(num, i); wc.append(bar);
+    c(r.losses);
+    c(fmtPct(r.win_pct));
+    c(r.back === 0 ? '—' : r.back);
+    c(fmt1(r.pace));
+    c(fmt1(r.vegas_line));
+    const vs = c(fmtSigned(r.vs_line)); vs.className = r.vs_line > 0 ? 'pos' : r.vs_line < 0 ? 'neg' : '';
+  }
+}
+
+function drawRace() {
+  const box = document.getElementById('race');
+  const d = dash.data('race');
+  box.textContent = '';
+  if (d.status !== 'ok') { if (isBad(d.status)) box.innerHTML = failHTML; return; }
+  const rows = d.data.map((r) => ({ ...r, dt: new Date(r.date) }));
+  const dates = [...new Set(rows.map((r) => r.date))].sort();
+  if (dates.length < 2) {
+    const e = document.createElement('div'); e.className = 'hd-empty';
+    e.textContent = 'The race line starts once there are two days of standings. Check back tomorrow.';
+    box.append(e); return;
+  }
+  const players = [...new Set(rows.map((r) => r.player))];
+  const lb = dash.data('leaderboard');
+  const order = lb.status === 'ok' ? lb.data.map((r) => r.player) : players;
+  const color = new Map(order.map((p, i) => [p, dash.colors[i % dash.colors.length]]));
+  const series = order.filter((p) => players.includes(p)).map((p) => ({ p, pts: rows.filter((r) => r.player === p) }));
+
+  const W = box.clientWidth || 600, H = 280;
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const yMax = d3.max(rows, (r) => r.wins) || 1;
+  const y = d3.scaleLinear([0, yMax * 1.08], [H - 28, 10]).nice();
+  // measure widest tick and end label
+  const probe = svg.append('text').attr('font-size', 12).text(d3.format(',')(y.domain()[1]));
+  const tickW = probe.node().getComputedTextLength(); probe.remove();
+  let endW = 0;
+  for (const s of series) { const last = s.pts[s.pts.length - 1]; const t = svg.append('text').attr('font-size', 12).text(`${s.p} ${last.wins}`); endW = Math.max(endW, t.node().getComputedTextLength()); t.remove(); }
+  const m = { l: tickW + 10, r: endW + 14 };
+  const x = d3.scaleUtc(d3.extent(rows, (r) => r.dt), [m.l, W - m.r]);
+  const yTicks = y.ticks(5);
+  svg.append('g').selectAll('line').data(yTicks).join('line')
+    .attr('x1', m.l).attr('x2', W - m.r).attr('y1', (t) => y(t)).attr('y2', (t) => y(t))
+    .attr('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
+  svg.append('g').selectAll('text').data(yTicks).join('text')
+    .attr('x', m.l - 8).attr('y', (t) => y(t)).attr('dy', '0.32em').attr('text-anchor', 'end')
+    .attr('font-size', 12).attr('fill', 'var(--color-fg-muted)').text((t) => d3.format(',')(t));
+  const maxTicks = Math.max(2, Math.floor((W - m.l - m.r) / 70));
+  const step = Math.ceil(dates.length / maxTicks);
+  const xAxis = d3.axisBottom(x).tickValues(dates.filter((_, i) => i % step === 0).map((s) => new Date(s))).tickFormat(d3.utcFormat('%b %-d')).tickSizeOuter(0);
+  const gx = svg.append('g').attr('transform', `translate(0,${H - 28})`).call(xAxis).attr('font-size', null).attr('font-family', null);
+  gx.select('.domain').attr('stroke', 'var(--cds-chart-axis)');
+  gx.selectAll('.tick line').attr('stroke', 'var(--cds-chart-axis)');
+  gx.selectAll('.tick text').attr('fill', 'var(--color-fg-muted)').attr('font-size', 12);
+
+  const line = d3.line().x((r) => x(r.dt)).y((r) => y(r.wins));
+  const g = svg.append('g');
+  for (const s of series) {
+    g.append('path').datum(s.pts).attr('d', line).attr('fill', 'none').attr('stroke', color.get(s.p))
+      .attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+  }
+  // end labels, nudged apart
+  const ends = series.map((s) => { const l = s.pts[s.pts.length - 1]; return { p: s.p, w: l.wins, x: x(l.dt), y: y(l.wins) }; }).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
+  svg.append('g').selectAll('text').data(ends).join('text')
+    .attr('x', (e) => e.x + 6).attr('y', (e) => e.y).attr('dy', '0.32em').attr('font-size', 12)
+    .attr('fill', (e) => color.get(e.p)).text((e) => `${e.p} ${e.w}`);
+
+  // tooltip
+  const tip = document.createElement('div'); tip.className = 'hd-tip'; tip.hidden = true; box.append(tip);
+  const rule = svg.append('line').attr('stroke', 'var(--cds-chart-reference)').attr('y1', 10).attr('y2', H - 28).attr('opacity', 0);
+  const dots = svg.append('g');
+  const dts = dates.map((s) => new Date(s));
+  svg.append('rect').attr('x', m.l).attr('y', 0).attr('width', W - m.l - m.r).attr('height', H - 28).attr('fill', 'transparent')
+    .on('pointermove', (ev) => {
+      const [mx] = d3.pointer(ev);
+      const t = x.invert(mx); const i = d3.bisectCenter(dts.map(Number), +t); const dt = dts[i]; const ds = dates[i];
+      const here = series.map((s) => ({ p: s.p, r: s.pts.find((r) => r.date === ds) })).filter((h) => h.r).sort((a, b) => b.r.wins - a.r.wins);
+      rule.attr('x1', x(dt)).attr('x2', x(dt)).attr('opacity', 1);
+      dots.selectAll('circle').data(here).join('circle').attr('cx', x(dt)).attr('cy', (h) => y(h.r.wins)).attr('r', 3.5).attr('fill', (h) => color.get(h.p));
+      tip.textContent = '';
+      const hd = document.createElement('div'); hd.className = 'd'; hd.textContent = d3.utcFormat('%b %-d')(dt); tip.append(hd);
+      for (const h of here) {
+        const r = document.createElement('div'); r.className = 'r';
+        const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = color.get(h.p);
+        const n = document.createElement('span'); n.textContent = h.p;
+        const v = document.createElement('b'); v.textContent = h.r.wins;
+        r.append(sw, n, v); tip.append(r);
+      }
+      tip.hidden = false;
+      const bw = box.clientWidth, tw = tip.offsetWidth, px = (x(dt) / W) * bw;
+      tip.style.left = Math.max(0, Math.min(bw - tw, px + 12 + tw > bw ? px - tw - 12 : px + 12)) + 'px';
+      tip.style.top = '8px';
+    })
+    .on('pointerleave', () => { tip.hidden = true; rule.attr('opacity', 0); dots.selectAll('circle').remove(); });
+}
+
+function drawRosters() {
+  const grid = document.getElementById('roster-grid');
+  const ro = dash.data('roster'), lb = dash.data('leaderboard');
+  grid.textContent = '';
+  if (ro.status !== 'ok' || lb.status !== 'ok') {
+    if (isBad(ro.status) || isBad(lb.status)) grid.innerHTML = failHTML;
+    else for (let i = 0; i < 6; i++) { const c = document.createElement('div'); c.className = 'hd-card dash-skeleton'; c.style.minHeight = '220px'; grid.append(c); }
+    return;
+  }
+  for (const p of lb.data) {
+    const card = document.createElement('article'); card.className = 'hd-card'; card.id = 'roster-' + p.player.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const head = document.createElement('div'); head.className = 'hd-ros-head';
+    const h3 = document.createElement('h3'); h3.textContent = p.player;
+    if (p.status === 'leader') { const s = document.createElement('span'); s.className = 'hd-chip ok'; s.textContent = 'Leader'; h3.append(s); }
+    if (p.status === 'last') { const s = document.createElement('span'); s.className = 'hd-chip bad'; s.textContent = 'Hot dog zone'; h3.append(s); }
+    const tot = document.createElement('div');
+    const tw = document.createElement('span'); tw.className = 'hd-ros-total';
+    tw.dataset.source = 'leaderboard'; tw.dataset.field = 'wins'; tw.dataset.where = 'player=' + encodeURIComponent(p.player);
+    tw.textContent = p.wins;
+    const tl = document.createElement('span'); tl.className = 'hd-ros-sub'; tl.textContent = ' wins';
+    tot.append(tw, tl);
+    head.append(h3, tot);
+    const sub = document.createElement('div'); sub.className = 'hd-ros-sub';
+    sub.textContent = `${p.wins}–${p.losses} overall`;
+
+    const wrap = document.createElement('div'); wrap.className = 'hd-scroll';
+    const t = document.createElement('table'); t.className = 'hd-table';
+    t.dataset.source = 'roster'; t.dataset.rowKey = 'team';
+    const thead = t.createTHead().insertRow();
+    for (const [f, label, cls] of [['team', 'Team', 'l'], ['wins', 'W'], ['losses', 'L'], ['pace', 'Pace'], ['vegas_total', 'Vegas'], ['vs_line', '+/−']]) {
+      const th = document.createElement('th'); th.dataset.field = f; th.textContent = label; if (cls) th.className = cls; thead.append(th);
+    }
+    const tb = t.createTBody();
+    for (const r of ro.data.filter((x) => x.player === p.player).sort((a, b) => b.wins - a.wins || a.losses - b.losses)) {
+      const tr = tb.insertRow(); tr.dataset.key = r.team;
+      const c = (txt, cls) => { const td = tr.insertCell(); td.textContent = txt; if (cls) td.className = cls; return td; };
+      c(nick(r.team), 'l'); c(r.wins); c(r.losses); c(fmt1(r.pace)); c(fmt1(r.vegas_total));
+      c(fmtSigned(r.vs_line), r.vs_line > 0 ? 'pos' : r.vs_line < 0 ? 'neg' : '');
+    }
+    wrap.append(t);
+    card.append(head, sub, wrap);
+    grid.append(card);
+  }
+}
+
+dash.onData(() => { drawSummary(); drawLeaderboard(); drawRace(); drawRosters(); });
+</script>
+</body>
+</html>
