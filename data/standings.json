@@ -6,15 +6,15 @@
   "losses": 1
  },
  {
-  "team": "Detroit Pistons",
+  "team": "Boston Celtics",
   "conference": "East",
   "wins": 5,
   "losses": 1
  },
  {
-  "team": "Boston Celtics",
+  "team": "Detroit Pistons",
   "conference": "East",
-  "wins": 4,
+  "wins": 5,
   "losses": 1
  },
  {
@@ -24,13 +24,13 @@
   "losses": 2
  },
  {
-  "team": "Toronto Raptors",
+  "team": "Washington Wizards",
   "conference": "East",
   "wins": 3,
-  "losses": 2
+  "losses": 3
  },
  {
-  "team": "Washington Wizards",
+  "team": "Toronto Raptors",
   "conference": "East",
   "wins": 3,
   "losses": 3
@@ -51,12 +51,6 @@
   "team": "Orlando Magic",
   "conference": "East",
   "wins": 2,
-  "losses": 3
- },
- {
-  "team": "Indiana Pacers",
-  "conference": "East",
-  "wins": 2,
   "losses": 4
  },
  {
@@ -72,7 +66,19 @@
   "losses": 4
  },
  {
+  "team": "Indiana Pacers",
+  "conference": "East",
+  "wins": 2,
+  "losses": 5
+ },
+ {
   "team": "Chicago Bulls",
+  "conference": "East",
+  "wins": 1,
+  "losses": 5
+ },
+ {
+  "team": "Brooklyn Nets",
   "conference": "East",
   "wins": 1,
   "losses": 5
@@ -81,12 +87,6 @@
   "team": "Milwaukee Bucks",
   "conference": "East",
   "wins": 1,
-  "losses": 5
- },
- {
-  "team": "Brooklyn Nets",
-  "conference": "East",
-  "wins": 0,
   "losses": 5
  },
  {
@@ -102,6 +102,12 @@
   "losses": 1
  },
  {
+  "team": "Los Angeles Lakers",
+  "conference": "West",
+  "wins": 5,
+  "losses": 2
+ },
+ {
   "team": "Portland Trail Blazers",
   "conference": "West",
   "wins": 4,
@@ -109,12 +115,6 @@
  },
  {
   "team": "San Antonio Spurs",
-  "conference": "West",
-  "wins": 4,
-  "losses": 2
- },
- {
-  "team": "Los Angeles Lakers",
   "conference": "West",
   "wins": 4,
   "losses": 2
@@ -138,16 +138,16 @@
   "losses": 3
  },
  {
+  "team": "Golden State Warriors",
+  "conference": "West",
+  "wins": 4,
+  "losses": 3
+ },
+ {
   "team": "Denver Nuggets",
   "conference": "West",
   "wins": 3,
   "losses": 2
- },
- {
-  "team": "Golden State Warriors",
-  "conference": "West",
-  "wins": 3,
-  "losses": 3
  },
  {
   "team": "New Orleans Pelicans",
@@ -165,7 +165,7 @@
   "team": "Los Angeles Clippers",
   "conference": "West",
   "wins": 1,
-  "losses": 4
+  "losses": 5
  },
  {
   "team": "Utah Jazz",
