@@ -3,12 +3,12 @@
   "team": "Philadelphia 76ers",
   "conference": "East",
   "wins": 8,
-  "losses": 1
+  "losses": 2
  },
  {
   "team": "Boston Celtics",
   "conference": "East",
-  "wins": 6,
+  "wins": 7,
   "losses": 2
  },
  {
@@ -20,19 +20,19 @@
  {
   "team": "Atlanta Hawks",
   "conference": "East",
-  "wins": 5,
-  "losses": 4
- },
- {
-  "team": "Washington Wizards",
-  "conference": "East",
-  "wins": 4,
+  "wins": 6,
   "losses": 4
  },
  {
   "team": "Toronto Raptors",
   "conference": "East",
-  "wins": 4,
+  "wins": 5,
+  "losses": 4
+ },
+ {
+  "team": "Cleveland Cavaliers",
+  "conference": "East",
+  "wins": 5,
   "losses": 4
  },
  {
@@ -42,16 +42,10 @@
   "losses": 4
  },
  {
-  "team": "Cleveland Cavaliers",
+  "team": "Washington Wizards",
   "conference": "East",
   "wins": 4,
-  "losses": 4
- },
- {
-  "team": "Charlotte Hornets",
-  "conference": "East",
-  "wins": 3,
-  "losses": 6
+  "losses": 5
  },
  {
   "team": "Indiana Pacers",
@@ -66,6 +60,12 @@
   "losses": 6
  },
  {
+  "team": "Charlotte Hornets",
+  "conference": "East",
+  "wins": 3,
+  "losses": 7
+ },
+ {
   "team": "Brooklyn Nets",
   "conference": "East",
   "wins": 2,
@@ -78,21 +78,21 @@
   "losses": 6
  },
  {
-  "team": "Milwaukee Bucks",
-  "conference": "East",
-  "wins": 1,
-  "losses": 7
- },
- {
   "team": "Chicago Bulls",
   "conference": "East",
   "wins": 1,
   "losses": 7
  },
  {
+  "team": "Milwaukee Bucks",
+  "conference": "East",
+  "wins": 1,
+  "losses": 8
+ },
+ {
   "team": "Los Angeles Lakers",
   "conference": "West",
-  "wins": 7,
+  "wins": 8,
   "losses": 2
  },
  {
@@ -102,40 +102,46 @@
   "losses": 2
  },
  {
-  "team": "Portland Trail Blazers",
+  "team": "San Antonio Spurs",
   "conference": "West",
-  "wins": 6,
-  "losses": 1
- },
- {
-  "team": "Memphis Grizzlies",
-  "conference": "West",
-  "wins": 6,
+  "wins": 7,
   "losses": 2
  },
  {
   "team": "Oklahoma City Thunder",
   "conference": "West",
-  "wins": 6,
-  "losses": 2
- },
- {
-  "team": "San Antonio Spurs",
-  "conference": "West",
-  "wins": 6,
+  "wins": 7,
   "losses": 2
  },
  {
   "team": "Minnesota Timberwolves",
   "conference": "West",
-  "wins": 6,
+  "wins": 7,
   "losses": 3
+ },
+ {
+  "team": "Portland Trail Blazers",
+  "conference": "West",
+  "wins": 6,
+  "losses": 2
  },
  {
   "team": "Golden State Warriors",
   "conference": "West",
   "wins": 6,
   "losses": 3
+ },
+ {
+  "team": "Memphis Grizzlies",
+  "conference": "West",
+  "wins": 6,
+  "losses": 3
+ },
+ {
+  "team": "Dallas Mavericks",
+  "conference": "West",
+  "wins": 5,
+  "losses": 4
  },
  {
   "team": "Denver Nuggets",
@@ -147,13 +153,7 @@
   "team": "New Orleans Pelicans",
   "conference": "West",
   "wins": 4,
-  "losses": 4
- },
- {
-  "team": "Dallas Mavericks",
-  "conference": "West",
-  "wins": 4,
-  "losses": 4
+  "losses": 5
  },
  {
   "team": "Phoenix Suns",
@@ -162,21 +162,21 @@
   "losses": 5
  },
  {
-  "team": "Sacramento Kings",
-  "conference": "West",
-  "wins": 1,
-  "losses": 7
- },
- {
   "team": "Los Angeles Clippers",
   "conference": "West",
   "wins": 1,
   "losses": 7
  },
  {
+  "team": "Sacramento Kings",
+  "conference": "West",
+  "wins": 1,
+  "losses": 8
+ },
+ {
   "team": "Utah Jazz",
   "conference": "West",
   "wins": 1,
-  "losses": 7
+  "losses": 8
  }
 ]
